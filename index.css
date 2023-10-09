@@ -13,16 +13,21 @@ add background picture
 }
 
 /* body start*/
-body {background-color: green;}
+body {background-color: black;
+    background-image: url("images/jimi-hendrix-08.jpg")}
 
-#wrapper { background-color: rgba(0, 0, 0, 0.5);
-    width: 800px;
-    height: 1000px;
-
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    
 }
 
 /* Body end */
-
+.main-container
+{background-color: rgba(0,0,0,0.5)
+display: grid;}
+width: 50vw;
+height:50vw;
 /*header start*/
 header {}
 h1{}
