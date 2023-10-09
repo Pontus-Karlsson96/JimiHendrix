@@ -1,0 +1,50 @@
+/*Jimmi Hendrix Project
+
+add background picture
+
+
+
+
+
+*/
+
+* {
+    margin: 0;
+}
+
+/* body start*/
+body {background-color: green;}
+
+#wrapper { background-color: rgba(0, 0, 0, 0.5);
+    width: 800px;
+    height: 1000px;
+
+}
+
+/* Body end */
+
+/*header start*/
+header {}
+h1{}
+/*header end*/
+
+/*nav start*/
+
+/*nav end*/
+
+/*main start*/
+h2{}
+h3{}
+p{}
+ul{}
+li{}
+article{}
+div{}
+img{}
+ol{}
+
+
+
+/*main end*/
+/*section start*/
+/*section end*/
