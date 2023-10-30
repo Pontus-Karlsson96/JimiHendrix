@@ -8,45 +8,94 @@ add background picture
 
 */
 
+
+/*common*/
 * {
     margin: 0;
+    padding: 0;
 }
 
-/* body start*/
-body {background-color: black;
-    background-image: url("images/jimi-hendrix-08.jpg")}
 
-#wrapper {
-    width: 100vw;
-    height: 100vh;
-    
+
+
+
+
+/* body start*/
+body {
+    background-color: black;
+    background-image: url("images/jimi-hendrix-08.jpg");
+    position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
 }
 
 /* Body end */
-.main-container
-{background-color: rgba(0,0,0,0.5)
-display: grid;}
-width: 50vw;
-height:50vw;
+
+/*wrapper*/
+#wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: auto;
+    margin: 30px 50px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    gap: 20px;
+}
+
 /*header start*/
-header {}
-h1{}
+body #wrapper header {
+    text-align: left;
+    font-size: 4vw;
+}
+
 /*header end*/
 
 /*nav start*/
+body #wrapper nav {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: red;
+    padding: 10px;
+    gap: 10px;
+    text-align: center;
+
+    width: 100%;
+
+}
+
+
+body #wrapper nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 2vw;
+    display: block;
+    padding: 10px;
+}
 
 /*nav end*/
 
 /*main start*/
-h2{}
-h3{}
-p{}
-ul{}
-li{}
-article{}
-div{}
-img{}
-ol{}
+body #wrapper main {
+    display: grid;
+    background-color: aqua;
+    margin: 10px;
+    width: 100%;
+    height: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+/*grid*/
+
 
 
 
