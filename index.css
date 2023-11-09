@@ -1,18 +1,40 @@
 /*Jimmi Hendrix Project
 
-add background picture
 
 
+hitta rätt font till nav
+fixa hovereffekt till nav
 
 
 
 */
+
+@font-face {
+    font-family: barlow_condenced;
+    src: url(./fonts/Barlow_Condensed/BarlowCondensed-Black.ttf);
+}
+
+@font-face {
+    font-family: barlow_semi;
+    src: url(./fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Black.ttf)
+}
+
+@font-face {
+    font-family: bungee_outline;
+    src: url(./fonts/Bungee_Outline/BungeeOutline-Regular.ttf);
+}
+
+@font-face {
+    font-family: bungee_shade;
+    src: url(./fonts/Bungee_Shade/BungeeShade-Regular.ttf);
+}
 
 
 /*common*/
 * {
     margin: 0;
     padding: 0;
+
 }
 
 p,
@@ -52,18 +74,19 @@ body {
     width: 100%;
     height: 90%;
     border-radius: 20px;
-    display: grid;
+    /*display: grid;*/
     gap: 20px;
 }
 
 /*header start*/
 body #wrapper header {
     text-align: left;
-    font-size: 4vw;
-    color: white;
+    font-size: 3vw;
+    color: lightgrey;
     width: 100%;
     height: 10vw;
     padding: 20px;
+    font-family: "bungee_shade";
 }
 
 body #wrapper header h1 {
@@ -73,27 +96,31 @@ body #wrapper header h1 {
 /*header end*/
 
 /*nav start*/
-/*body #wrapper nav {
+body #wrapper nav {
     display: flex;
     flex-grow: 1;
     flex-direction: row;
-    justify-content: space-between;
-    background-color: red;
+    justify-content: space-evenly;
     padding: 10px;
     gap: 10px;
     text-align: center;
-
-    width: 100%;*/
+    width: 100%;
+    box-sizing: border-box;
 
 }
 
 
-/* body #wrapper nav a {
+body #wrapper nav a {
     text-decoration: none;
     color: black;
+    background-color: rgba(255, 255, 255, 0.6);
     font-size: 2vw;
     display: block;
-    padding: 10px;*/
+    width: 100%;
+    padding: 20px 0 20px 0;
+    display: inline-block;
+    border-radius: 10px;
+    font-family: "barlow_conceded";
 }
 
 /*nav end*/
