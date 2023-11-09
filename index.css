@@ -4,6 +4,7 @@
 
 hitta rätt font till nav
 fixa hovereffekt till nav
+fixa albumbilderna första sidan
 
 
 
@@ -40,9 +41,7 @@ fixa hovereffekt till nav
 p,
 ul,
 ol,
-li {
-    display: none;
-}
+li {}
 
 
 
@@ -109,7 +108,6 @@ body #wrapper nav {
 
 }
 
-
 body #wrapper nav a {
     text-decoration: none;
     color: black;
@@ -126,15 +124,70 @@ body #wrapper nav a {
 /*nav end*/
 
 /*main start*/
-/* body #wrapper main {
+body #wrapper main {
     display: grid;
-    background-color: aqua;
+    box-sizing: border-box;
+    border: 1px solid white;
     margin: 10px;
-    width: 100%;
-    height: 1000px;
+    padding: 20px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    border-radius: 20px;
+
+}
+
+body #wrapper main h2 {
+    font-family: "bungee_outline";
+    font-size: 2vw;
+    color: white;
+}
+
+body #wrapper main h3 {
+    font-family: "barlow_semi";
+    font-size: 2vw;
+    color: white;
+}
+
+body #wrapper main>div {
+    box-sizing: border-box;
+    color: white;
+    /*font-family: "barlow_semi";*/
+    border: 1px solid black;
+    width: 50%;
+    padding: 20px;
+}
+
+body #wrapper main>div p {
+    text-align: left;
+}
+
+body #wrapper main>div ul {
+    list-style: none;
+    padding: 5px 25px;
+}
+
+body #wrapper main>div ul li {
+    padding-bottom: 5px;
+    font-size: 1vw;
+}
+
+body #wrapper main>p {
+    color: white;
+    width: 50%;
+    border: 1px solid black;
+    padding: 20px;
+
+}
+
+.album-container {
+    background-color: aqua;
+
+}
+
+.album-container img {
+    background-image: url(./images/AreyouexpUK.jpg);
+    height: 100px;
+    width: 100%;
+    background-position: center;
 }
 
 /*grid*/
