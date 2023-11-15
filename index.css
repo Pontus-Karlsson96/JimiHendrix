@@ -40,13 +40,12 @@ fixa albumbilderna första sidan
 }
 
 .album-container {
-    background-color: yellow;
-    border: 1px solid black;
     display: flex;
     flex-direction: column;
     grid-template-columns: repeat(1fr, 2);
     grid-template-rows: repeat(1fr, 2);
     gap: 10px;
+    color: pink;
 }
 
 img {
@@ -65,13 +64,16 @@ ul {
     font-size: 0.8vw;
 }
 
-p,
-ul,
-ol,
-li {}
 
 
 
+h2 {
+    font-family: "bungee_outline";
+}
+
+h3 {
+    font-family: "barlow_semi";
+}
 
 
 /* body start*/
@@ -92,16 +94,18 @@ body {
 
 /* Body end */
 
-/*wrapper*/
+/*wrapper start*/
 #wrapper {
     background-color: rgba(0, 0, 0, 0.4);
     margin: auto;
     margin: 75px 150px;
     width: 100%;
-    height: 90%;
+    height: 2500px;
     border-radius: 20px;
     gap: 20px;
 }
+
+/* wrapper end*/
 
 /*header start*/
 body #wrapper header {
@@ -149,7 +153,8 @@ body #wrapper nav a {
 
 /*nav end*/
 
-/*main start*/
+/*main and section common*/
+
 body #wrapper main,
 body #wrapper section {
     display: flex;
@@ -160,24 +165,73 @@ body #wrapper section {
     margin: 10px;
     padding: 20px;
     border-radius: 20px;
+    color: rgb(240, 240, 240);
+}
+
+/*top start*/
+.top {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/*top end*/
+/*left start*/
+.left {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+body #wrapper main .top .left,
+body #wrapper section .top .left {
+    gap: 50px;
+}
+
+/*left end*/
+/*right start*/
+.right {
+    width: 40%;
+}
+
+.right .album-container div:nth-of-type(2) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-grow: 1;
+    justify-content: space-evenly;
+}
+
+.right .album-container div:nth-of-type(2) div:nth-of-type(1),
+.right .album-container div:nth-of-type(2) div:nth-of-type(2) {
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.right .album-container div:nth-of-type(2) div:nth-of-type(1) {
+    border-radius: 0 0 0 20px;
+}
+
+.right .album-container div:nth-of-type(2) div:nth-of-type(2) {
+    border-radius: 0 0 20px 0;
 }
 
 
 
-
-
-/*left*/
-
-
-
-.album-container div p {
-    background-color: aqua;
-}
+/*right end*/
 
 .album-container div img {
     width: 100%;
     height: auto;
     background-size: cover;
+    border-radius: 20px 20px 0 0;
 }
 
 .bottom {
@@ -188,8 +242,6 @@ body #wrapper section {
     padding: 20px;
     gap: 10px;
     justify-content: center;
-
-
 }
 
 .bottom div {
@@ -208,24 +260,45 @@ body #wrapper section {
 
 }
 
-.bottom div p {}
+/*left main end*/
 
-.bottom div:nth-of-type(1) {
+
+/*main start*/
+
+
+/*top main start*/
+
+/*top end*/
+
+/*left main start*/
+
+
+/*left end*/
+
+/*right main start*/
+
+
+
+/*right end*/
+
+/*bottom main start*/
+
+main .bottom div:nth-of-type(1) {
     flex-grow: 1;
     border-radius: 10% 0 10% 10%;
 }
 
-.bottom div:nth-of-type(2) {
+main .bottom div:nth-of-type(2) {
     flex-grow: 1;
     opacity: 0;
 }
 
-.bottom div:nth-of-type(3) {
+main .bottom div:nth-of-type(3) {
     flex-grow: 2;
     border-radius: 10% 10% 10% 0;
 }
 
-.bottom div:nth-of-type(4) {
+main .bottom div:nth-of-type(4) {
     flex-grow: 1;
     background-image: url(./images/cc.jpeg);
     background-size: cover;
@@ -234,51 +307,68 @@ body #wrapper section {
     border-radius: 0 10% 10% 10%;
 }
 
-.bottom div:nth-of-type(5) {
+main .bottom div:nth-of-type(5) {
     flex-grow: 1;
     border-radius: 10% 10% 0 10%;
 }
 
-.left {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.right {
-    width: 40%;
-}
-
-.top {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
-
-}
-
-.right .album-container div:nth-of-type(2) {
-    background-color: blue;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    gap: 10px;
-    flex-grow: 1;
-    justify-content: space-evenly;
-}
-
-.right .album-container div:nth-of-type(2) div:nth-of-type(1),
-.right .album-container div:nth-of-type(2) div:nth-of-type(2) {
-    background-color: azure;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
+/*bottom end*/
 /*main end*/
+
+
+
 /*section start*/
+
+
+/*right start*/
+section .top .right .album-container div:nth-of-type(2) div:nth-of-type(1),
+section .top .right .album-container div:nth-of-type(2) div:nth-of-type(2) {
+    background-color: steelblue;
+}
+
+/*right end*/
+
+/*bottom section start*/
+
+section .bottom div {
+    background-color: bisque;
+    color: lightskyblue;
+
+}
+
+section .bottom div:nth-of-type(1) {
+    flex-grow: 2;
+    border-radius: 10% 10% 10% 0;
+}
+
+section .bottom div:nth-of-type(2) {
+    flex-grow: 1;
+    border-radius: 0 10% 10% 10%;
+}
+
+section .bottom div:nth-of-type(3) {
+    flex-grow: 2;
+    background-image: url(./images/ek.jpeg);
+    background-position: center;
+    background-size: cover;
+    align-items: flex-end;
+    color: lightgrey;
+    border-radius: 0 10% 10% 10%;
+}
+
+section .bottom div:nth-of-type(4) {
+    flex-grow: 1;
+    border-radius: 10% 10% 0 10%;
+}
+
+
+
+
+/*bottom end*/
+
+
+
+
+
+
 /*section end*/
