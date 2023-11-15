@@ -54,6 +54,7 @@ img {
     height: auto;
     background-position: center;
     background-size: contain;
+    overflow: hidden;
 }
 
 
@@ -182,6 +183,8 @@ body #wrapper section {
 .bottom {
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
+    flex-basis: 0;
     height: 10vw;
     width: 100%;
     padding: 20px;
@@ -192,6 +195,8 @@ body #wrapper section {
 
 .bottom div {
     background-color: blueviolet;
+    flex-grow: 1;
+    flex-basis: 0;
 
 
 }
