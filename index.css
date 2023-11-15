@@ -183,26 +183,36 @@ body #wrapper section {
 .bottom {
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
-    flex-basis: 0;
-    height: 10vw;
+    height: 15vw;
     width: 100%;
     padding: 20px;
     gap: 10px;
-    background-color: blue;
+    justify-content: center;
+
 
 }
 
 .bottom div {
-    background-color: blueviolet;
+    background-color: palevioletred;
     flex-grow: 1;
     flex-basis: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding: 20px 5px;
+    color: orange;
 
 
 }
 
+.bottom div p {}
+
 .bottom div:nth-of-type(1) {
     flex-grow: 1;
+    border-radius: 10% 0 10% 10%;
 }
 
 .bottom div:nth-of-type(2) {
@@ -212,14 +222,21 @@ body #wrapper section {
 
 .bottom div:nth-of-type(3) {
     flex-grow: 2;
+    border-radius: 10% 10% 10% 0;
 }
 
 .bottom div:nth-of-type(4) {
     flex-grow: 1;
+    background-image: url(./images/cc.jpeg);
+    background-size: cover;
+    background-position: center;
+    align-items: flex-end;
+    border-radius: 0 10% 10% 10%;
 }
 
 .bottom div:nth-of-type(5) {
     flex-grow: 1;
+    border-radius: 10% 10% 0 10%;
 }
 
 .left {
