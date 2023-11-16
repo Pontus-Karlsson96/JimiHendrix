@@ -45,7 +45,7 @@ fixa albumbilderna första sidan
     grid-template-columns: repeat(1fr, 2);
     grid-template-rows: repeat(1fr, 2);
     gap: 10px;
-    color: pink;
+    color: rgba(163, 15, 113, 255);
 }
 
 img {
@@ -204,11 +204,12 @@ body #wrapper section .top .left {
     gap: 10px;
     flex-grow: 1;
     justify-content: space-evenly;
+    background-image: none;
 }
 
 .right .album-container div:nth-of-type(2) div:nth-of-type(1),
 .right .album-container div:nth-of-type(2) div:nth-of-type(2) {
-    background-color: orange;
+    background-color: rgba(238, 203, 0, 255);
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -231,7 +232,8 @@ body #wrapper section .top .left {
 
 .album-container div img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    max-height: 550px;
     background-size: cover;
     border-radius: 20px 20px 0 0;
 }
@@ -278,11 +280,12 @@ body #wrapper section .top .left {
 /*left end*/
 
 /*right main start*/
-.album-container>div {
-    background-image: url(./images/jimi-hendrix-08.jpg);
+main .album-container>div {
+    background-image: url(./images/AreyouexpUK.jpg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;
 }
 
 
@@ -328,9 +331,32 @@ main .bottom div:nth-of-type(5) {
 
 
 /*right start*/
+section .top .right .album-container div:nth-of-type(2) {
+    background-position: top;
+    max-height: 550px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
 section .top .right .album-container div:nth-of-type(2) div:nth-of-type(1),
 section .top .right .album-container div:nth-of-type(2) div:nth-of-type(2) {
     background-color: steelblue;
+}
+
+section .album-container>div {
+    background-image: url(./images/bold-as-love-2.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+}
+
+section .album-container div img {
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /*right end*/
@@ -393,5 +419,4 @@ body #wrapper nav a:nth-of-type(4):hover {
 /*image change*/
 .album-container div img:hover {
     opacity: 0;
-
 }
