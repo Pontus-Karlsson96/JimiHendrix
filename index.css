@@ -3,8 +3,11 @@
 
 
 hitta rätt font till nav
-fixa hovereffekt till nav
-fixa albumbilderna första sidan
+fixa responsiv
+fixa fontstorlek
+animation på album
+
+
 
 
 
@@ -39,6 +42,7 @@ fixa albumbilderna första sidan
 
 }
 
+
 .album-container {
     display: flex;
     flex-direction: column;
@@ -61,18 +65,27 @@ ol,
 ul {
     list-style: inside;
     padding: 10px;
-    font-size: 0.8vw;
+    font-size: 1vw;
+
 }
 
+ul {
+    list-style: none;
+}
 
+p {
+    font-size: 1.1vw;
+}
 
 
 h2 {
     font-family: "bungee_outline";
+    font-size: 2vw;
 }
 
 h3 {
     font-family: "barlow_semi";
+    font-size: 1.5vw;
 }
 
 
@@ -227,9 +240,6 @@ body #wrapper section .top .left {
 }
 
 
-
-/*right end*/
-
 .album-container div img {
     width: 100%;
     height: 100%;
@@ -238,6 +248,7 @@ body #wrapper section .top .left {
     border-radius: 20px 20px 0 0;
 }
 
+/*right end*/
 .bottom {
     display: flex;
     flex-direction: row;
@@ -420,3 +431,5 @@ body #wrapper nav a:nth-of-type(4):hover {
 .album-container div img:hover {
     opacity: 0;
 }
+
+@media screen and (max-width: 800px) {}
