@@ -46,8 +46,6 @@ animation på album
 .album-container {
     display: flex;
     flex-direction: column;
-    grid-template-columns: repeat(1fr, 2);
-    grid-template-rows: repeat(1fr, 2);
     gap: 10px;
     color: rgba(163, 15, 113, 255);
 }
@@ -97,7 +95,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    min-width: 500px;
     height: 2000px;
     display: flex;
     justify-content: center;
@@ -208,6 +205,13 @@ body #wrapper section .top .left {
 /*right start*/
 .right {
     width: 40%;
+}
+
+.album-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: rgba(163, 15, 113, 255);
 }
 
 .right .album-container div:nth-of-type(2) {
@@ -345,7 +349,6 @@ main .bottom div:nth-of-type(5) {
 section .top .right .album-container div:nth-of-type(2) {
     background-position: top;
     max-height: 550px;
-    width: 100%;
     height: auto;
     overflow: hidden;
 }
@@ -432,9 +435,79 @@ body #wrapper nav a:nth-of-type(4):hover {
     opacity: 0;
 }
 
-@media screen and (max-width: 800px) {}
+@media (max-width: 800px) {
+
+    body #wrapper header {
+        text-align: center;
+        font-size: 4vw;
+        height: 25vw;
+
+    }
+
+    ol,
+    ul,
+    p {
+        font-size: 3.4vw;
+    }
+
+    h2,
+    h3 {
+        font-size: 5vw;
+    }
+
+    #wrapper {
+        margin: 0 30px;
+    }
 
 
+    .top,
+    .left,
+    .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        width: 100%;
+        row-gap: 20px;
+    }
+
+    /*order*/
+    .right {
+        order: 1;
+    }
+
+    .left {
+        order: 2;
+    }
+
+    .bottom {
+        flex-wrap: wrap;
+        height: 100vw;
+        font-size: 2vw;
+        min-width: 300px;
+    }
+
+
+    main .bottom div:nth-of-type(1),
+    main .bottom div:nth-of-type(2),
+    main .bottom div:nth-of-type(3),
+    main .bottom div:nth-of-type(4),
+    main .bottom div:nth-of-type(5) {
+
+        flex-shrink: 0;
+        width: 30vw;
+        height: 30vw;
+        flex-flow: ;
+        flex-basis: unset;
+    }
+
+    .bottom div {
+        flex-grow: 1;
+        flex-shrink: 0;
+        width: 70px;
+    }
+
+}
 
 /*max 1200px
 
