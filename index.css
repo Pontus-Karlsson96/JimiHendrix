@@ -127,15 +127,18 @@ body #wrapper header h1 {
 /*nav start*/
 body #wrapper nav {
     display: flex;
-    flex-grow: 1;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 10px;
     gap: 10px;
     text-align: center;
     width: 100%;
-    box-sizing: border-box;
+}
 
+body #wrapper nav a:nth-of-type(2) {
+    border: 1px solid white;
+    font-weight: bold;
+    box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.9);
 }
 
 body #wrapper nav a {
@@ -143,10 +146,8 @@ body #wrapper nav a {
     color: black;
     background-color: rgba(255, 255, 255, 0.6);
     font-size: 2vw;
-    display: block;
     width: 100%;
     padding: 20px 0 20px 0;
-    display: inline-block;
     border-radius: 10px;
     font-family: "barlow_conceded";
 }
@@ -213,6 +214,7 @@ body #wrapper section .top .left {
     width: 50%;
     padding: 10px;
     box-sizing: border-box;
+    background-image: none;
 }
 
 .right .album-container div:nth-of-type(2) div:nth-of-type(1) {
@@ -276,7 +278,12 @@ body #wrapper section .top .left {
 /*left end*/
 
 /*right main start*/
-
+.album-container>div {
+    background-image: url(./images/jimi-hendrix-08.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 
 /*right end*/
@@ -362,13 +369,29 @@ section .bottom div:nth-of-type(4) {
 }
 
 
-
-
 /*bottom end*/
 
 
-
-
-
-
 /*section end*/
+
+/*footer*/
+footer {
+    text-align: left;
+}
+
+
+/*hover effects*/
+
+/*navbar hover*/
+body #wrapper nav a:nth-of-type(1):hover,
+body #wrapper nav a:nth-of-type(3):hover,
+body #wrapper nav a:nth-of-type(4):hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+/*image change*/
+.album-container div img:hover {
+    opacity: 0;
+
+}
