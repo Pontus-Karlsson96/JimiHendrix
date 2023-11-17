@@ -394,7 +394,6 @@ footer {
     text-align: left;
 }
 
-
 /*hover effects*/
 
 /*navbar hover*/
@@ -409,9 +408,6 @@ body #wrapper nav a:nth-of-type(4):hover {
 .album-container div img:hover {
     opacity: 0;
 }
-
-
-
 
 /*Responsivity*/
 
@@ -540,8 +536,6 @@ body #wrapper nav a:nth-of-type(4):hover {
     section .bottom div:nth-of-type(5) {
         order: 5;
     }
-
-
 
 }
 
