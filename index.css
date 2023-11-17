@@ -1,21 +1,12 @@
 /*Jimmi Hendrix Project
 
-
-
-hitta rätt font till nav
-fixa responsiv
-fixa fontstorlek
-animation på album
-
-
-
-
+Made by Pontus Karlsson
 
 */
 
 @font-face {
     font-family: barlow_condenced;
-    src: url(./fonts/Barlow_Condensed/BarlowCondensed-Black.ttf);
+    src: url(./fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf);
 }
 
 @font-face {
@@ -39,15 +30,9 @@ animation på album
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "barlow_condenced";
 
-}
 
-
-.album-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    color: rgba(163, 15, 113, 255);
 }
 
 img {
@@ -67,8 +52,12 @@ ul {
 
 }
 
+ol {
+    list-style: decimal inside;
+}
+
 ul {
-    list-style: none;
+    list-style: none inside;
 }
 
 p {
@@ -91,11 +80,9 @@ h3 {
 body {
     background-color: black;
     background-image: url("images/jimi-hendrix-08.jpg");
-    position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 2000px;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -107,12 +94,10 @@ body {
 /*wrapper start*/
 #wrapper {
     background-color: rgba(0, 0, 0, 0.4);
-    margin: auto;
     margin: 75px 150px;
     width: 100%;
-    height: 2500px;
     border-radius: 20px;
-    gap: 20px;
+    max-width: 900px;
 }
 
 /* wrapper end*/
@@ -124,12 +109,13 @@ body #wrapper header {
     color: lightgrey;
     width: 100%;
     height: 10vw;
+    max-height: 110px;
     padding: 20px;
-    font-family: "bungee_shade";
 }
 
 body #wrapper header h1 {
     width: 100%;
+    font-family: "bungee_shade";
 }
 
 /*header end*/
@@ -143,6 +129,7 @@ body #wrapper nav {
     gap: 10px;
     text-align: center;
     width: 100%;
+    margin: 50px 0;
 }
 
 body #wrapper nav a:nth-of-type(2) {
@@ -159,7 +146,7 @@ body #wrapper nav a {
     width: 100%;
     padding: 20px 0 20px 0;
     border-radius: 10px;
-    font-family: "barlow_conceded";
+    font-family: "barlow_condenced";
 }
 
 /*nav end*/
@@ -247,18 +234,18 @@ body #wrapper section .top .left {
 .album-container div img {
     width: 100%;
     height: 100%;
-    max-height: 550px;
+    max-height: 335px;
+
     background-size: cover;
     border-radius: 20px 20px 0 0;
+    transition: 1s;
 }
 
 /*right end*/
 .bottom {
     display: flex;
     flex-direction: row;
-    height: 15vw;
     width: 100%;
-    padding: 20px;
     gap: 10px;
     justify-content: center;
 }
@@ -272,26 +259,19 @@ body #wrapper section .top .left {
     overflow: hidden;
     z-index: 1;
     position: relative;
-    text-align: center;
+    text-align: left;
     padding: 20px 5px;
-    color: orange;
+    color: rgb(241, 184, 76);
+    max-height: 180px;
 
 
 }
 
 /*left main end*/
-
-
 /*main start*/
-
-
 /*top main start*/
-
 /*top end*/
-
 /*left main start*/
-
-
 /*left end*/
 
 /*right main start*/
@@ -302,7 +282,6 @@ main .album-container>div {
     background-repeat: no-repeat;
     border-radius: 20px 20px 0 0;
 }
-
 
 /*right end*/
 
@@ -341,10 +320,7 @@ main .bottom div:nth-of-type(5) {
 /*main end*/
 
 
-
 /*section start*/
-
-
 /*right start*/
 section .top .right .album-container div:nth-of-type(2) {
     background-position: top;
@@ -355,7 +331,8 @@ section .top .right .album-container div:nth-of-type(2) {
 
 section .top .right .album-container div:nth-of-type(2) div:nth-of-type(1),
 section .top .right .album-container div:nth-of-type(2) div:nth-of-type(2) {
-    background-color: steelblue;
+    background-color: rgba(0, 169, 234, 255);
+    color: bisque;
 }
 
 section .album-container>div {
@@ -408,11 +385,9 @@ section .bottom div:nth-of-type(4) {
     border-radius: 10% 10% 0 10%;
 }
 
-
 /*bottom end*/
-
-
 /*section end*/
+
 
 /*footer*/
 footer {
@@ -435,13 +410,22 @@ body #wrapper nav a:nth-of-type(4):hover {
     opacity: 0;
 }
 
-@media (max-width: 800px) {
+
+
+
+/*Responsivity*/
+
+@media (max-width: 500px) {
 
     body #wrapper header {
         text-align: center;
-        font-size: 4vw;
+        font-size: 5vw;
         height: 25vw;
 
+    }
+
+    body #wrapper nav a {
+        font-size: 1em;
     }
 
     ol,
@@ -455,10 +439,13 @@ body #wrapper nav a:nth-of-type(4):hover {
         font-size: 5vw;
     }
 
+    .bottom div p {
+        font-size: 0.70em;
+    }
+
     #wrapper {
         margin: 0 30px;
     }
-
 
     .top,
     .left,
@@ -471,7 +458,6 @@ body #wrapper nav a:nth-of-type(4):hover {
         row-gap: 20px;
     }
 
-    /*order*/
     body {
         background-image: url(./images/jhbakgrund2.jpeg);
         background-position: center;
@@ -488,21 +474,22 @@ body #wrapper nav a:nth-of-type(4):hover {
     .bottom {
         flex-wrap: wrap;
         height: 100vw;
-        font-size: 2vw;
         min-width: 300px;
     }
 
+    section .bottom {
+        height: 75vw;
+    }
 
-    main .bottom div:nth-of-type(1),
-    main .bottom div:nth-of-type(2),
-    main .bottom div:nth-of-type(3),
-    main .bottom div:nth-of-type(4),
-    main .bottom div:nth-of-type(5) {
+    .bottom div:nth-of-type(1),
+    .bottom div:nth-of-type(2),
+    .bottom div:nth-of-type(3),
+    .bottom div:nth-of-type(4),
+    .bottom div:nth-of-type(5) {
 
         flex-shrink: 0;
         width: 30vw;
         height: 30vw;
-        flex-flow: ;
         flex-basis: unset;
     }
 
@@ -510,8 +497,10 @@ body #wrapper nav a:nth-of-type(4):hover {
         flex-grow: 1;
         flex-shrink: 0;
         width: 70px;
+
     }
 
+    /*order*/
     main .bottom div:nth-of-type(1) {
         order: 1;
     }
@@ -532,20 +521,99 @@ body #wrapper nav a:nth-of-type(4):hover {
         order: 5;
     }
 
+    section .bottom div:nth-of-type(1) {
+        order: 1;
+    }
+
+    section .bottom div:nth-of-type(2) {
+        order: 3;
+    }
+
+    section .bottom div:nth-of-type(3) {
+        order: 2;
+    }
+
+    section .bottom div:nth-of-type(4) {
+        order: 4;
+    }
+
+    section .bottom div:nth-of-type(5) {
+        order: 5;
+    }
+
+
 
 }
 
-/*max 1200px
+/*max width 1200px*/
+@media (min-width: 1200px) {
 
-800
+    ul {
+        font-size: 1.1em;
+    }
 
-500
+    ol {
+        font-size: 0.8em;
+    }
 
-fontsize vid
-800-900
-max 1200
-500 mobile sjunker med innehållet
+    p {
+        font-size: 1.2em;
+    }
+
+    body #wrapper header {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.8em;
+    }
+
+    .bottom div p {
+        font-size: 0.95em;
+    }
+
+    a {
+        font-size: 1.6em;
+    }
+}
 
 
+@media (min-width:801px) and (max-width: 900px) {
 
-*/
+
+    body #wrapper header {
+        font-size: 1.8em;
+    }
+
+    ul {
+        font-size: 0.7em;
+    }
+
+    ol {
+        font-size: 0.65em;
+    }
+
+    p {
+        font-size: 1.1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.8em;
+    }
+
+    .bottom div p {
+        font-size: 0.6em;
+    }
+
+    a {
+        font-size: 1.6em;
+    }
+}
